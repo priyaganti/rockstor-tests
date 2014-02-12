@@ -64,7 +64,7 @@ public class DeleteSnapshot {
 					.until(ExpectedConditions.elementToBeClickable(By.id("js-delete")));
 
 			//Select Snapshot from navigation
-			WebElement snapNav = driver.findElement(By.xpath("//div/ul/li/a[contains(@href, 'snapshots')]"));
+			WebElement snapNav = driver.findElement(By.xpath("//div/ul/li/a[contains(text(), 'Snapshots')]"));
 			snapNav.click();
 
 			
@@ -74,7 +74,7 @@ public class DeleteSnapshot {
 			
 			// searching for partial text of snapshot
 			WebElement delSnapRow = driver.findElement(
-					By.xpath("//*[@id='snapshots-table']/tbody/tr[td[contains(text(),' sp_')]]"));
+					By.xpath("//*[@id='snapshots-table']/tbody/tr[td[contains(text(),' snap')]]"));
 			WebElement delSnap = delSnapRow.findElement(By.xpath("td/a/i[contains(@class,'icon-trash')]"));
 			delSnap.click();
 			
