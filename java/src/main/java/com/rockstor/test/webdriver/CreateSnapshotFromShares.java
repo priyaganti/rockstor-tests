@@ -166,7 +166,7 @@ public class CreateSnapshotFromShares {
 
 			//Select Snapshot from navigation
 
-			WebElement snapNav = driver.findElement(By.xpath("//div/ul/li/a[contains(@href, 'snapshots')]"));
+			WebElement snapNav = driver.findElement(By.xpath("//div/ul/li/a[contains(text(), 'Snapshots')]"));
 			snapNav.click();
 
 			// Wait for snapshot page to load
